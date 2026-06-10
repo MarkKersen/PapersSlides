@@ -1,0 +1,168 @@
+/* Mark Kerssenfischer — academic homepage
+   Plain, dependency-free CSS. No build step. */
+
+:root {
+  --ink: #1a1a1a;
+  --muted: #5f6b7a;
+  --accent: #14507a;       /* Bundesbank-ish deep blue */
+  --accent-light: #e8f0f6;
+  --rule: #e2e6ea;
+  --bg: #ffffff;
+  --max: 760px;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+.wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---------- header ---------- */
+.site-header {
+  border-bottom: 1px solid var(--rule);
+  padding: 38px 0 0;
+}
+.site-header h1 {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: -0.01em;
+}
+.tagline {
+  margin: 4px 0 18px;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+.primary-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 22px;
+}
+.primary-nav a {
+  display: inline-block;
+  padding: 10px 0;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.primary-nav a:hover { text-decoration: underline; }
+
+/* ---------- sections ---------- */
+main { padding: 8px 0 40px; }
+
+section {
+  padding: 28px 0;
+  border-bottom: 1px solid var(--rule);
+}
+section:last-child { border-bottom: 0; }
+
+h2 {
+  font-size: 1.35rem;
+  margin: 0 0 18px;
+  scroll-margin-top: 20px;
+}
+section { scroll-margin-top: 20px; }
+
+.lede { font-size: 1.12rem; margin-top: 0; }
+.muted { color: var(--muted); font-size: 0.95rem; }
+
+/* inline link lists (about) */
+.links {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 12px;
+}
+.links a {
+  display: inline-block;
+  padding: 6px 14px;
+  background: var(--accent-light);
+  color: var(--accent);
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.links a:hover { background: #d8e6f1; }
+
+/* ---------- publications ---------- */
+.pub {
+  padding: 18px 0;
+  border-top: 1px solid var(--rule);
+}
+.pub:first-of-type { border-top: 0; padding-top: 0; }
+
+.pub-title {
+  font-size: 1.1rem;
+  margin: 0 0 4px;
+  line-height: 1.35;
+}
+.pub-meta {
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.pub-abstract {
+  margin: 0 0 12px;
+  font-size: 0.98rem;
+}
+.pub-actions, .pub-sub {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  margin: 0;
+  font-size: 0.9rem;
+}
+.pub-sub {
+  display: block;
+  margin-top: 10px;
+  color: var(--muted);
+}
+.pub-actions a {
+  display: inline-block;
+  padding: 5px 12px;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+.pub-actions a:hover { background: var(--accent); color: #fff; }
+.pub-sub a { color: var(--accent); }
+
+/* ---------- simple lists ---------- */
+.simple-list { padding-left: 1.1em; margin: 0; }
+.simple-list li { margin-bottom: 10px; }
+.simple-list a, .lede a, address a { color: var(--accent); }
+
+address { font-style: normal; line-height: 1.7; }
+
+/* ---------- footer ---------- */
+.site-footer {
+  border-top: 1px solid var(--rule);
+  padding: 24px 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+.site-footer p { margin: 0; }
+
+/* ---------- responsive ---------- */
+@media (max-width: 520px) {
+  body { font-size: 16px; }
+  .site-header h1 { font-size: 1.6rem; }
+}
