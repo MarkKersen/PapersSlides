@@ -123,9 +123,20 @@ section { scroll-margin-top: 20px; }
 
 .pub-title {
   font-size: 1.1rem;
+  font-weight: 600;
   margin: 0 0 4px;
   line-height: 1.35;
 }
+
+/* collapsible abstract (title = toggle) */
+.pub-collapse { margin: 0 0 4px; }
+summary.pub-title {
+  cursor: pointer;
+  margin: 0;
+}
+summary.pub-title:hover,
+.pub-collapse[open] > summary.pub-title { color: var(--accent); }
+.pub-collapse > .pub-abstract { margin-top: 10px; }
 .pub-meta {
   margin: 0 0 10px;
   color: var(--muted);
