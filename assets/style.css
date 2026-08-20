@@ -173,6 +173,15 @@ summary.pub-title:hover,
 /* ---------- simple lists ---------- */
 .simple-list { padding-left: 1.1em; margin: 0; }
 .simple-list li { margin-bottom: 10px; }
+
+/* talks grouped by paper: title once, venues nested below */
+.talk-list { list-style: none; padding-left: 0; }
+.talk-title { font-weight: 600; }
+.talk-venues {
+  margin: 6px 0 0;
+  padding-left: 1.3em;
+}
+.talk-venues li { margin-bottom: 6px; }
 .simple-list a, .lede a, address a { color: var(--accent); }
 
 address { font-style: normal; line-height: 1.7; }
