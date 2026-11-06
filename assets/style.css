@@ -182,7 +182,7 @@ summary.pub-title:hover,
   padding-left: 1.3em;
 }
 .talk-venues li { margin-bottom: 6px; }
-.simple-list a, .lede a, address a { color: var(--accent); }
+.simple-list a, .lede a, address a, .pub-meta a { color: var(--accent); }
 
 address { font-style: normal; line-height: 1.7; }
 
